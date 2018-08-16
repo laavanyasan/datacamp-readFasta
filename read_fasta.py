@@ -1,3 +1,5 @@
+import sys
+
 def read_fasta(filename):
     sequence = ''
     f = open(filename)
@@ -9,4 +11,8 @@ def read_fasta(filename):
     f.close()
     return sequence
 
-print(read_fasta('ae.fa'))
+if len(sys.argv) < 2:
+    print('Usage:', sys.argv[0], '<sequence.fa>')
+    exit(1)
+
+print(read_fasta(sys.argv[1]))
