@@ -11,7 +11,7 @@ def read_fasta(filename):
             sequence = sequence + line
     f.close()
     return sequence
-
+##Adding another comment cause I can
 if len(sys.argv) < 2:
     print('Usage:', sys.argv[0], '<sequence.fa>')
     exit(1)
